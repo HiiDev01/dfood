@@ -1,0 +1,35 @@
+.sch-wrap{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+.sch-icon{
+  font-size: 1.5rem;
+  color: var(--Text);
+  background-color: var( --Secondary);
+}
+.sch-wrap input{
+  flex: 1;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--Text);
+  font-family: var(--font-two);
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+.sch-wrap:focus-within {
+  border: 2px solid var(--Primary); /* Change border color on focus */
+}
+.sch-wrap input::placeholder{
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-family: var(--font-two);
+  font-weight: 400;
+}

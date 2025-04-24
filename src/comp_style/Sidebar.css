@@ -1,0 +1,117 @@
+.sidebar {
+  width: 20%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: var(--Background); /* Tailwind's bg-gray-800 */
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+.sidebar.expanded {
+  width: 5%;
+}
+/*
+.sidebar.collapsed {
+  width: 64px;
+}*/
+
+/* Smooth Transition */
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.app-logo{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--Background);
+  box-shadow: 0px 0px 1px var(--Button);
+  padding: 5px 15px;
+  margin: 0px 0px 30px 0px;
+}
+.app-logo img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.app-logo span{
+  font-family: var(--font-two);
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--Text);
+  font-size: 0.9rem;
+}
+.sidelist-head{
+  font-size:  0.9rem;
+  text-transform: capitalize;
+  font-family: var(--font-one);
+  margin: 0px 0px 0px 15px;
+  color: var(--Text);
+}
+
+
+.sidebar ul{
+  width: 100%;
+  padding: 10px 10px;
+  list-style: none;
+  height: inherit;
+}
+.sidebar li{
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.sidebar a{
+  width: 100%;
+  display: flex;
+  line-height: 1.8;
+  align-items: center;
+  justify-content: auto;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--Text);
+  font-family: var(--font-one);
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+.sidebar a:hover{
+  color: var(--Primary);
+  background-color: var(--Border);
+  font-weight: 500;
+}
+.sidebar a.active{
+  color: var(--Primary);
+  background-color: var(--Border);
+}
+.side-icon{
+  margin: 0px 0px 0px 0px;
+  font-size:  1.3rem;
+  padding: 5px 0px 0px 0px;
+}
+
+
+
+.sidebar.expanded li .side-text {
+  display: none;
+}
+.sidebar.expanded .app-logo span{
+  display: none;
+}
+.sidebar.expanded .app-logo {
+  justify-content: center;
+}
+.sidebar.expanded .sidelist-head {
+  display: none;
+}
+/* Sidebar Hover Effect (Optional) 
+.sidebar.expanded:hover {
+  width: 250px;
+}*/
+
+/* Show text on hover when collapsed 
+.sidebar.expanded:hover li .side-text {
+  display: inline;
+}*/

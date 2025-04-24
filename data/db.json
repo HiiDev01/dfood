@@ -1,0 +1,169 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cheeseburger",
+      "description": "Beef patty, cheddar cheese, lettuce, tomato, and house sauce",
+      "price": 5.99,
+      "category": "burgers",
+      "image": "/hamburger.png",
+      "rating": 4,
+      "stock": 20
+    },
+    {
+      "id": 2,
+      "name": "Pizza",
+      "description": "Thin crust pizza topped with mozzarella and pepperoni slices",
+      "price": 9.99,
+      "category": "pizza",
+      "image": "/pizza.png",
+      "rating": 4.5,
+      "stock": 10
+    },
+    {
+      "id": 3,
+      "name": "Chicken",
+      "description": "8-piece spicy wings served with ranch dip",
+      "price": 6.49,
+      "category": "chicken",
+      "image": "/fried-chicken.png",
+      "rating": 3.5,
+      "stock": 15
+    },
+    {
+      "id": 4,
+      "name": "French Fries",
+      "description": "Golden crispy fries with a side of ketchup",
+      "price": 2.99,
+      "category": "sides",
+      "image": "/fries.png",
+      "rating": 5,
+      "stock": 30
+    },
+    {
+      "id": 5,
+      "name": "baklava",
+      "description": "Vanilla cake topped with chocolate syrup and nuts",
+      "price": 3.49,
+      "category": "dessert",
+      "image": "/baklava.png",
+      "rating": 4,
+      "stock": 18
+    },
+    {
+      "id": 6,
+      "name": "salad",
+      "description": "Vanilla cake topped with chocolate syrup and nuts",
+      "price": 3.49,
+      "category": "dessert",
+      "image": "/salad.png",
+      "rating": 3,
+      "stock": 18
+    },
+    {
+      "id": 7,
+      "name": "berbecue",
+      "description": "Creamy berbecue made with real sald vegtables",
+      "price": 3.99,
+      "category": "drinks",
+      "image": "/berbecue.png",
+      "rating": 2.5,
+      "stock": 25
+    },
+    {
+      "id": 8,
+      "name": "donut",
+      "description": "Loaded with donut , olives, onions, and mushrooms",
+      "price": 8.99,
+      "category": "pizza",
+      "image": "/donut.png",
+      "rating": 5,
+      "stock": 12
+    },
+    {
+      "id": 9,
+      "name": "Taco",
+      "description": "Beef taco with lettuce, tomatoes, cheese, and sour cream",
+      "price": 2.99,
+      "category": "mexican",
+      "image": "/taco.png",
+      "rating": 5,
+      "stock": 20
+    },
+    {
+      "id": 10,
+      "name": "cup cakes",
+      "description": "Vanilla cake topped with chocolate syrup and nuts",
+      "price": 3.49,
+      "category": "dessert",
+      "image": "/cupcakes.png",
+      "rating": 4.5,
+      "stock": 18
+    },
+    {
+      "id": 11,
+      "name": "spaghetti",
+      "description": "Vanilla cake topped with chocolate syrup and nuts",
+      "price": 3.49,
+      "category": "dessert",
+      "image": "/spaghetti.png",
+      "rating": 3,
+      "stock": 18
+    },
+    {
+      "id": 12,
+      "name": "shawarma",
+      "description": "Vanilla cake topped with chocolate syrup and nuts",
+      "price": 3.49,
+      "category": "dessert",
+      "image": "/shawarma.png",
+      "rating": 5,
+      "stock": 18
+    }
+
+  ],
+
+  "categories": [
+    { "id": 1, "name": "burgers" },
+    { "id": 2, "name": "pizza" },
+    { "id": 3, "name": "chicken" },
+    { "id": 4, "name": "sides" },
+    { "id": 5, "name": "drinks" },
+    { "id": 6, "name": "mexican" },
+    { "id": 7, "name": "dessert" }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "abcd"
+    }
+  ],
+
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productIds": [1, 4, 5],
+      "total": 12.97,
+      "status": "pending",
+      "date": "2025-04-12"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "productIds": [2, 3],
+      "total": 16.48,
+      "status": "delivered",
+      "date": "2025-04-10"
+    }
+  ]
+}

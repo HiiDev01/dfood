@@ -1,0 +1,30 @@
+.mode_btn{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: none;
+  padding: 8px 5px;
+  font-family: var(--font-one);
+  font-weight: 400;
+  transition:  background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.mode_btn:hover{
+  background-color: var(--change-appr);
+  transition:  background-color 0.2s ease-in-out;
+}
+.change_appr{
+  display: none;
+  color: var(--light-black);
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 1200px){
+  .mode_btn{
+    width: 100%;
+  }
+  .change_appr{
+    display: block;
+  }
+}
