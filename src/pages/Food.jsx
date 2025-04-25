@@ -20,6 +20,9 @@ const Food = () => {
   const [allFood, setAllFood] = useState(null);
   const [loadingFood, setLoadingFood] = useState(null);
   const {addToCart} = useCart();
+  const userId = 1;
+  const isLoggedIn = true;
+
 
 
   const uri = `http://localhost:5000/products`
@@ -41,7 +44,48 @@ const Food = () => {
     fetchFood();
   }, []);
 
-  const handleAddToCart = (foods)=>{
+  const handleAddToCart = async (foods)=>{
+    if(isLoggedIn){
+      const res = await fetch(`http://localhost:5000/orders?userId=${userId}&productIds=${foods.id}`)
+      const existItem = await res.json()
+
+      if(existItem.length > 0){
+        const updateItem = {
+          ...existItem[0],
+          quantity: existItem[0].quantity + 1
+        };
+        await fetch(`http://localhost:5000/orders/${existItem[0].id}`,
+          {
+            method: "PUT",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(updateItem),
+          });
+      }else{
+        await fetch("http://localhost:5000/orders", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+
+          body: JSON.stringify({
+            userId,
+            productId: foods.id,
+            name: foods.name,
+            price: foods.price,
+            quantity: 1
+          })
+        });
+
+      }
+    }else{
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const index = cart.findIndex((item) => item.id === foods.id);
+
+      if(index !==  - 1){
+        cart[index].quantity += 1
+      }else{
+        cart.push({...foods, quantity: 1});
+      }
+      localStorage.setItem("cart", JSON.stringify(cart))
+    }
     addToCart(foods)
     alert(`item added to cart ${foods.id}`)
     console.log(`item ${foods.id} added to cart`)
@@ -134,13 +178,13 @@ const Food = () => {
             <div className="sch-food">
               <SearchBox/>
             </div>
-            {setLoadingFood && (<p>{loadingFood}</p>)}    
+            {loadingFood && (<p>{loadingFood}</p>)}    
             {allFood &&(
               <div className='food-grids'>
                {allFood.map(foods =>(
                   <div key={foods.id} className='grid-items'>
                     <div className='foodImg'>
-                      <img src={foods.image} alt={foods.title} />
+                      <img src={foods.image} alt={foods.name} />
                     </div>
                     <RatingStar rating={foods.rating}/>
                     <p className='food-price'>${foods.price.toFixed(2)}</p>
@@ -151,7 +195,7 @@ const Food = () => {
                     </button>
                     <div className='in-stock'>
                       <button></button>
-                      <p>in stock : <span>{foods.stock}</span></p>
+                      <p>in stock : <span>{foods.stock ?? 'N/A'}</span></p>
                     </div>
                   </div>
                ))}
