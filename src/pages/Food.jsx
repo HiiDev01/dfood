@@ -182,6 +182,7 @@ const Food = () => {
                     <div className='foodImg'>
                       <img src={foods.image} alt={foods.name} />
                     </div>
+                    <h3 className='foodName'>{foods.name}</h3>
                     <RatingStar rating={foods.rating ?? 0}/>
                     <p className='food-price'>${foods.price.toFixed(2)}</p>
                     <button 

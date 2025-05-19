@@ -174,7 +174,7 @@
       "status": "pending",
       "date": "2025-04-12",
       "name": "",
-      "quantity": 39
+      "quantity": 61
     },
     {
       "id": "2",
@@ -191,7 +191,7 @@
       "productId": 3,
       "name": "Chicken",
       "price": 6.49,
-      "quantity": 4
+      "quantity": 7
     },
     {
       "id": "2d59",
@@ -199,7 +199,7 @@
       "productId": 4,
       "name": "French Fries",
       "price": 2.99,
-      "quantity": 1
+      "quantity": 4
     },
     {
       "id": "2768",
@@ -207,7 +207,7 @@
       "productId": 2,
       "name": "Pizza",
       "price": 19.98,
-      "quantity": 5
+      "quantity": 15
     },
     {
       "id": "0f99",
@@ -215,7 +215,7 @@
       "productId": 8,
       "name": "donut",
       "price": 8.99,
-      "quantity": 2
+      "quantity": 5
     },
     {
       "id": "6d26",
@@ -223,7 +223,7 @@
       "productId": 7,
       "name": "berbecue",
       "price": 3.99,
-      "quantity": 1
+      "quantity": 4
     },
     {
       "id": "c504",
@@ -231,7 +231,47 @@
       "productId": "12",
       "name": "shawarma",
       "price": 3.49,
+      "quantity": 5
+    },
+    {
+      "id": "4f82",
+      "userId": 1,
+      "productId": "5",
+      "name": "baklava",
+      "price": 3.49,
+      "quantity": 4
+    },
+    {
+      "id": "16e0",
+      "userId": 1,
+      "productId": "6",
+      "name": "salad",
+      "price": 3.49,
+      "quantity": 4
+    },
+    {
+      "id": "33a2",
+      "userId": 1,
+      "productId": "11",
+      "name": "spaghetti",
+      "price": 3.49,
+      "quantity": 1
+    },
+    {
+      "id": "025a",
+      "userId": 1,
+      "productId": "10",
+      "name": "cup cakes",
+      "price": 3.49,
       "quantity": 3
+    },
+    {
+      "id": "2541",
+      "userId": 1,
+      "productId": "9",
+      "name": "Taco",
+      "price": 2.99,
+      "quantity": 2
     }
   ]
 }

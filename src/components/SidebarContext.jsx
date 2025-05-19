@@ -16,8 +16,14 @@ export const SidebarProvider = ({ children }) => {
     setIsSidebarOpen(prevState => !prevState);
   };
 
+  //close fucntion
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+    setISCollapse(false);
+  };
+
   return (
-    <SidebarContext.Provider value={{ isSidebarOpen, toggleSidebar }}>
+    <SidebarContext.Provider value={{ isSidebarOpen, isCollapse, toggleSidebar, closeSidebar  }}>
       {children}
     </SidebarContext.Provider>
   );

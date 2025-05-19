@@ -22,10 +22,10 @@ const ThemeToggle = () => {
     <div>
       <button onClick={toggleTheme} className='mode_btn'>
         {theme === 'light' ?(
-          <IoMoon style={{color: '#1A1F2C', fontSize: '1.2rem'}} />
+          <IoMoon style={{color: '#1A1F2C', fontSize: '1.3rem'}} />
           ) 
           : (
-          <IoSunny style={{color: 'orange', fontSize: '1.2rem'}}/>
+          <IoSunny style={{color: 'orange', fontSize: '1.3rem'}}/>
           )
         }
         <span className='change_appr'>change appearance</span>

@@ -28,3 +28,11 @@
     display: block;
   }
 }
+@media screen and (max-width: 780px){
+  .mode_btn{
+    width: 100%;
+  }
+  .change_appr{
+    display: none;
+  }
+}

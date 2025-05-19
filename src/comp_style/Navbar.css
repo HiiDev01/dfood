@@ -60,268 +60,89 @@
 
 
 
-.usernav{
-  width: max-content;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-}
-.notify{
+.navbar {
+  width: 100%;
+  padding: 10px 20px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  color: var(--Text);
-  border: none;
-  cursor: pointer;
-}
-.notifyIcon{
-  font-size: 1.6rem;
-  color: var(--Text);
-  font-weight: 400;
-}
-.abs_overlay{
-  position: fixed;
-  content: '';
-  height: 100%;
-  width: 100%;
-  background-color: var(--overlay);
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-.abs_notify{
-  width: 250px;
-  position: absolute;
-  content: '';
-  left: -60%;
-  top: 150%;
-  background-color: var(--Background);
   box-shadow: 0px 0px 1px var(--Button);
+  background-color: var(--Background);
 }
-.abs_notify h2{
-  width: 100%;
-  text-align: left;
-  border: none;
-  padding: 8px 15px;
-  border-bottom:  1px solid var(--Button);
-  border-bottom-style: dashed;
-  text-transform: capitalize;
-  color: var(--Text);
-  font-size: 1.1rem;
-  font-weight: 500;
-  font-family: var(--font-one);
-}
-.abs_notify ul{
-  list-style: none;
-  text-align: left;
-  padding: 10px 0px;
-}
-.abs_notify ul li{
-  padding: 8px 15px;
-}
-.abs_notify ul li h4{
-  font-size: 0.9rem;
-  font-family: var(--font-one);
-  font-weight: 600;
-}
-.abs_notify ul li h4::first-letter{
-  text-transform: capitalize;
 
+.navItemCon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.abs_notify ul li p{
-  font-size: 0.9rem;
-  color: var(--Button);
-  margin: 1px 0px 0px 0px;
+
+.navFil {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.user{
+
+.hamburger {
+  font-size: 1.5rem;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  background-color: transparent;
   border: none;
+  color: var(--Text);
   cursor: pointer;
-  position: relative;
 }
-.userImgCon{
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+
+.hmgIcon {
+  font-size: 1.7rem;
+}
+
+.navsearch {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--Button);
+  border-radius: 15px;
   overflow: hidden;
-
-}
-.userImgCon img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.user h3{
-  font-family: var(--font-one);
-  font-weight: 500;
-  color: var(--Text);
-  text-transform: capitalize;
-  font-size: 0.9rem;
-}
-.userSec{
-  position: absolute;
-  top: 150%;
-  right: 0;
-  background-color: var(--Background);
-  box-shadow: 0px 0px 1px var(  --Button);
-  border-radius: 2px;
-}
-.userSec ul{
-  list-style: none;
-  padding: 10px 10px 5px 10px;
-  border: none;
-  border-bottom:  1px solid var(--Button);
-  border-bottom-style: dashed;
-}
-.userSec ul li{
-  margin: 0px 0px 5px 0px;
   padding: 0px 10px;
-  border-radius: 3px;
-}
-.userSec ul li:hover{
-  background-color: var( --Secondary);
-}
-.userSec ul li a{
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-family: var(--font-two);
-  color: var(--Text);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 5px;
-  cursor: pointer;
-}
-.MBprofIcon{
-  font-size: 1rem;
-}
-.logoutDiv{
-  width: 100%;
-  padding: 5px 10px;
-}
-.logoutDiv button{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.8rem;
-  color: var(--Text);
-  font-family: var(--font-two);
-  background-color: transparent;
-  color: var( --logOut);
-  border: none;
-  padding: 5px 15px;
-  border-radius: 3px;
-  font-weight: 500;
-  cursor: pointer;
-}
-.MobprofIcon{
-  font-size: 1rem;
-}
-.logoutDiv button:hover{
-  background-color: var(  --logout);
 }
 
-
-/*********************************************************/
-.mobileNavItem{
-  display: none;
-  align-items: center;
-  gap: 15px;
-  position: relative;
-}
-.mobileNavItem .link,.mobileNavItem .button{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 1px var(--Button);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-}
-.MprofIcon{
-  font-size: 1.3rem;
-  color: var(--Text);
-  font-family: var(--font-two);
-  font-weight: 500;
-}
-.Mabs_overlay{
-  position: fixed;
-  content: '';
-  height: 100%;
-  width: 100%;
-  background-color: var(--overlay);
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-.MobileuserSec{
-  min-width: 150px;
-  position: absolute;
-  top: 150%;
-  right: 0;
-  background-color: var(--Background);
-  box-shadow: 0px 0px 1px var(  --Button);
-  border-radius: 2px;
-}
-.MobileuserSec ul{
-  list-style: none;
-  padding: 10px 10px 5px 10px;
-  border: none;
-  border-bottom:  1px solid var(--Button);
-  border-bottom-style: dashed;
-}
-.MobileuserSec ul li{
-  margin: 0px 0px 5px 0px;
-  padding: 0px 10px;
-  border-radius: 3px;
-}
-.MobileuserSec ul li:hover{
-  background-color: var( --Secondary);
-}
-.MobileuserSec ul li a{
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-family: var(--font-two);
-  color: var(--Text);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 5px;
-  cursor: pointer;
-}
-.MobileuserSec{
-  font-size: 1rem;
-}
-.MlogoutDiv{
-  width: 100%;
-  padding: 5px 10px;
-}
-.MlogoutDiv button{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.8rem;
-  color: var(--Text);
-  font-family: var(--font-two);
+.navsearch input {
+  flex: 1;
   background-color: transparent;
-  color: red;
+  padding: 5px;
+  max-width: 150px;
+  outline: none;
   border: none;
-  padding: 5px 15px;
-  border-radius: 3px;
+  color: var(--Text);
+}
+
+.navsearchIcon {
+  font-size: 1rem;
   font-weight: 500;
-  cursor: pointer;
+  color: var(--Text);
 }
-.MlogoutDiv button:hover{
-  background-color: var(  --logout);
+
+/* --------------------- */
+/*Responsive Section */
+/* --------------------- */
+@media (max-width: 768px) {
+  .navsearch {
+    display: none;
+  }
+
+  .navItemCon {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navFil {
+    gap: 10px;
+  }
 }
+

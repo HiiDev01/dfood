@@ -6,17 +6,26 @@
   background-color: var(--Background); /* Tailwind's bg-gray-800 */
   color: white;
   overflow: hidden;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out,  all 0.3s ease-in-out;;
 }
 .sidebar.expanded {
   width: 5%;
 }
+
+
+
 /*
 .sidebar.collapsed {
   width: 64px;
 }*/
 
 /* Smooth Transition */
+
+
+
+
+
+
 .transition-transform {
   transition: transform 0.3s ease-in-out;
 }
@@ -115,3 +124,40 @@
 .sidebar.expanded:hover li .side-text {
   display: inline;
 }*/
+
+
+/* Small screen responsiveness */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: 60%;
+    max-width: 300px;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.expanded,
+  .sidebar.collapsed {
+    transform: translateX(0);
+    width: 50%;
+  }
+
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+
+
+  .sidebar.expanded li .side-text {
+    display: block;
+  }
+  .sidebar.expanded .app-logo span{
+    display: block;
+  }
+  .sidebar.expanded .app-logo {
+    justify-content: center;
+  }
+  .sidebar.expanded .sidelist-head {
+    display: block;
+  }
+}
