@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import Navbar from '../components/Navbar'
 import '../page_style/Food.css'
 import { Link } from 'react-router-dom'
 import { FaAngleRight } from "react-icons/fa";
 import Slider from 'react-slider'; 
-import { useState } from 'react';
 import { IoStar, IoStarOutline, IoStarHalf} from "react-icons/io5";
 import SearchBox from '../components/SearchBox';
 import RatingStar from '../components/RatingStar';
@@ -46,14 +45,11 @@ const Food = () => {
 
   const handleAddToCart = async (foods)=>{
     if(isLoggedIn){
-      const res = await fetch(`http://localhost:5000/orders?userId=${userId}&productIds=${foods.id}`)
+      const res = await fetch(`http://localhost:5000/orders?userId=${userId}&productId=${foods.id}`)
       const existItem = await res.json()
 
       if(existItem.length > 0){
-        const updateItem = {
-          ...existItem[0],
-          quantity: existItem[0].quantity + 1
-        };
+        const updateItem = {...existItem[0], quantity: existItem[0].quantity + 1};
         await fetch(`http://localhost:5000/orders/${existItem[0].id}`,
           {
             method: "PUT",
@@ -79,7 +75,7 @@ const Food = () => {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       const index = cart.findIndex((item) => item.id === foods.id);
 
-      if(index !==  - 1){
+      if(index !==  -1){
         cart[index].quantity += 1
       }else{
         cart.push({...foods, quantity: 1});
@@ -186,7 +182,7 @@ const Food = () => {
                     <div className='foodImg'>
                       <img src={foods.image} alt={foods.name} />
                     </div>
-                    <RatingStar rating={foods.rating}/>
+                    <RatingStar rating={foods.rating ?? 0}/>
                     <p className='food-price'>${foods.price.toFixed(2)}</p>
                     <button 
                     onClick={()=> handleAddToCart(foods)}

@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar'
 import Home from './pages/Home';
 import AddFood from './components/AddFood';
 import Food from './pages/Food';
+import Cart from './pages/Cart';
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/add-food' element={<AddFood/>}/>
           <Route path='/Food' element={<Food/>}/>
+          <Route path='/Cart' element={<Cart/>}/>
         </Routes>
       </div>
       </CartProvider>

@@ -174,7 +174,7 @@
       "status": "pending",
       "date": "2025-04-12",
       "name": "",
-      "quantity": 18
+      "quantity": 39
     },
     {
       "id": "2",
@@ -191,7 +191,7 @@
       "productId": 3,
       "name": "Chicken",
       "price": 6.49,
-      "quantity": 3
+      "quantity": 4
     },
     {
       "id": "2d59",
@@ -207,7 +207,7 @@
       "productId": 2,
       "name": "Pizza",
       "price": 19.98,
-      "quantity": 3
+      "quantity": 5
     },
     {
       "id": "0f99",
@@ -224,6 +224,14 @@
       "name": "berbecue",
       "price": 3.99,
       "quantity": 1
+    },
+    {
+      "id": "c504",
+      "userId": 1,
+      "productId": "12",
+      "name": "shawarma",
+      "price": 3.49,
+      "quantity": 3
     }
   ]
 }
