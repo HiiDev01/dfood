@@ -1,0 +1,70 @@
+.Order{
+  width: 100%;
+}
+
+.OrderWrap{
+  padding: 0px 20px;
+
+}
+.NotLoginOrderWrap{
+    padding: 10px 0px;
+    background-color: var(--Background);
+}
+.emp-head{
+  font-size: 1.2rem;
+  color: var(--Text);
+  font-family: var(--font-two);
+  text-transform: capitalize;
+  font-weight: 400;
+  padding: 20px;
+}
+.NotLoginOrderWrap p{
+  font-size: 1.4rem;
+  font-family: var(--font-two);
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--Text);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.cart-table thead {
+  background-color: var(--Background);
+  color: var(--Text);
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-family: var(--font-two);
+}
+
+.cart-table th, .cart-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--Border);
+  border-collapse: collapse;
+  color: var(--Text);
+  font-size: 1rem;
+  font-family: var(--font-two);
+  text-transform: capitalize;
+}
+
+.cart-table tbody tr:nth-child(even) {
+  background-color: var(--Background);
+}
+
+.cart-table tbody tr:hover {
+  background-color: var(--Secondary);
+}
+
+.cart-table td:last-child {
+  text-transform: capitalize; /* For status like "pending", "completed", etc. */
+}

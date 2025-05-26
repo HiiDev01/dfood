@@ -15,12 +15,16 @@ const Min = 10;
 const Max = 100;
 
 const Food = () => {
-  const [values, setValues] = useState([Min, Max])
-  const [allFood, setAllFood] = useState(null);
+  const [values, setValues] = useState([Min, Max]);
+  const [allFood, setAllFood] = useState([]);
   const [loadingFood, setLoadingFood] = useState(null);
   const {addToCart} = useCart();
   const userId = 1;
   const isLoggedIn = true;
+
+  const [search, setSearch] = useState('');
+  const [filteredFood, setFilteredFood] = useState([])
+   /// filter product from the data are stored here 
 
 
 
@@ -37,11 +41,19 @@ const Food = () => {
       if(data){
     
         setAllFood(data)
+        setFilteredFood(data)
         setLoadingFood(null)
       }
     }
     fetchFood();
-  }, []);
+  }, []); /////useEffect to fetch product automatically without any search feild
+
+  useEffect(()=>{
+    const result = allFood.filter( food => 
+      food.name.toLowerCase().includes(search.toLowerCase()))
+      setFilteredFood(result);
+  }, [search, allFood]);///// useeffect to fecth the the food base on that os type in the search feild
+  
 
   const handleAddToCart = async (foods)=>{
     if(isLoggedIn){
@@ -97,7 +109,7 @@ const Food = () => {
           <div className="head-link">
             <Link to='/Food'>food</Link>
             <FaAngleRight  className='head-icon'/>
-            <Link to='/'>food</Link>
+            <Link to='/Cart'>Cart</Link>
           </div>
         </div>
         
@@ -172,12 +184,12 @@ const Food = () => {
           </div>
           <div className="main-con">
             <div className="sch-food">
-              <SearchBox/>
+              <SearchBox search={search} setSearch={setSearch}/>
             </div>
             {loadingFood && (<p>{loadingFood}</p>)}    
             {allFood &&(
               <div className='food-grids'>
-               {allFood.map(foods =>(
+               {filteredFood.map(foods =>(
                   <div key={foods.id} className='grid-items'>
                     <div className='foodImg'>
                       <img src={foods.image} alt={foods.name} />

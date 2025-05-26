@@ -167,111 +167,55 @@
   ],
   "orders": [
     {
-      "id": "1",
+      "id": "generated-id",
+      "userId": 1,
+      "productId": 2,
+      "name": "Pizza",
+      "price": 9.99,
+      "quantity": 11,
+      "total": 19.98,
+      "status": "pending",
+      "date": "2025-05-23"
+    },
+    {
+      "id": "e249",
       "userId": 1,
       "productId": 1,
-      "total": 12.97,
-      "status": "pending",
-      "date": "2025-04-12",
-      "name": "",
-      "quantity": 61
+      "name": "Cheeseburger",
+      "price": 5.99,
+      "quantity": 13
     },
     {
-      "id": "2",
-      "userId": 2,
-      "productId": 1,
-      "total": 16.48,
-      "status": "delivered",
-      "date": "2025-04-10",
-      "name": ""
-    },
-    {
-      "id": "6ba9",
+      "id": "f68b",
       "userId": 1,
       "productId": 3,
       "name": "Chicken",
       "price": 6.49,
-      "quantity": 7
+      "quantity": 2
     },
     {
-      "id": "2d59",
+      "id": "84de",
       "userId": 1,
       "productId": 4,
       "name": "French Fries",
       "price": 2.99,
-      "quantity": 4
+      "quantity": 2
     },
     {
-      "id": "2768",
+      "id": "b03c",
       "userId": 1,
-      "productId": 2,
-      "name": "Pizza",
-      "price": 19.98,
-      "quantity": 15
-    },
-    {
-      "id": "0f99",
-      "userId": 1,
-      "productId": 8,
-      "name": "donut",
-      "price": 8.99,
-      "quantity": 5
-    },
-    {
-      "id": "6d26",
-      "userId": 1,
-      "productId": 7,
-      "name": "berbecue",
-      "price": 3.99,
-      "quantity": 4
-    },
-    {
-      "id": "c504",
-      "userId": 1,
-      "productId": "12",
-      "name": "shawarma",
-      "price": 3.49,
-      "quantity": 5
-    },
-    {
-      "id": "4f82",
-      "userId": 1,
-      "productId": "5",
+      "productId": 5,
       "name": "baklava",
-      "price": 3.49,
-      "quantity": 4
-    },
-    {
-      "id": "16e0",
-      "userId": 1,
-      "productId": "6",
-      "name": "salad",
-      "price": 3.49,
-      "quantity": 4
-    },
-    {
-      "id": "33a2",
-      "userId": 1,
-      "productId": "11",
-      "name": "spaghetti",
       "price": 3.49,
       "quantity": 1
     },
     {
-      "id": "025a",
+      "id": "be3b",
       "userId": 1,
-      "productId": "10",
-      "name": "cup cakes",
+      "productId": 6,
+      "name": "salad",
       "price": 3.49,
-      "quantity": 3
-    },
-    {
-      "id": "2541",
-      "userId": 1,
-      "productId": "9",
-      "name": "Taco",
-      "price": 2.99,
-      "quantity": 2
+      "quantity": 1
     }
   ]
 }

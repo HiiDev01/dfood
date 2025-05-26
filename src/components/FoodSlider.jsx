@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import supabase from '../config/SupabaseClient';
 import '../comp_style/FoodSlider.css'
 import { useEffect,useState } from 'react';
 
@@ -38,14 +37,16 @@ const FoodSlider = () => {
             {food &&(
              <div className='food-grid'>
               {food.map(foods =>(
-                <div key={foods.id} className='gridFood'>
-                  <div className='foodimageWrap'>
-                    <div className='foodimage'>
-                      <img src={foods.image} alt={foods.title}/>
+                <Link to={`/Food/${foods.id}`} key={foods.id} className='foodLink'>
+                  <div className='gridFood'>
+                    <div className='foodimageWrap'>
+                      <div className='foodimage'>
+                        <img src={foods.image} alt={foods.title}/>
+                      </div>
                     </div>
+                    <h4>{foods.name}</h4>
                   </div>
-                  <h4>{foods.name}</h4>
-                </div>
+                </Link>
               ))}
              </div>
             )}

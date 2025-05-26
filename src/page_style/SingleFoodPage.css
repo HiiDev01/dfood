@@ -1,0 +1,78 @@
+.singleFoodPage{
+  width: 100%;
+}
+.backfood{
+  padding: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-family: var(--font-one);
+  font-weight: 500;
+  color: var(  --Primary);
+}
+.container{
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.min-continer{
+  width: 60%;
+}
+
+
+.foodImg img{
+  width: 160px;
+  height: 165px;
+  object-fit: contain;
+}
+.foodName{
+  font-size: 1.2rem;
+  color: var(--Text);
+  font-family: var(--font-two);
+  text-transform: capitalize;
+  font-weight: 500;
+  margin: 0px 0px 5px 0px;
+}
+.foodDes{
+  font-size: 1.2rem;
+  color: var(--Text);
+  font-weight: 400;
+  font-family: var(--font-one);
+  font-style: normal;
+  margin: 0px 0px 10px 0px;
+}
+.food-price{
+  font-size: 1.2rem;
+  color: var(--Text);
+  font-weight: 500;
+  font-family: var(--font-one);
+  font-style: normal;
+  margin: 0px 0px 10px 0px;
+}
+.cartBtn{
+  background-color: var(--Primary);
+  font-family: var(--font-two);
+  color: var(--btnColor);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0px 0px 10px 0px;
+  text-transform: capitalize;
+}
+.in-stock{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--Button);
+  padding: 10px 10px 10px 10px;
+}
+.in-stock p{
+  font-size: 0.9rem;
+  color: var(--Text);
+  font-weight: 400;
+  font-family: var(--font-two);
+  text-transform: capitalize;
+}
+

@@ -1,24 +1,33 @@
-import React, {createContext, useContext, useState} from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
 
-export const useCart = ()=>{
-  return useContext(CartContext)
-}
+export const useCart = () => {
+  return useContext(CartContext);
+};
 
-export const CartProvider = ({children})=>{
-  const [cart, setCart] = useState([])
+export const CartProvider = ({ children }) => {
+  // Initialize cart from localStorage
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
-  const addToCart = (item)=>{
+  // Save cart to localStorage on every change
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  const addToCart = (item) => {
     const exists = cart.find((i) => i.id === item.id);
-    if(exists){
+    if (exists) {
       setCart(
-        cart.map((i)=> 
-          i.id === item.id ? {...i, quantity: i.quantity +1} : i
-      )
-    );
-    }else{
-      setCart([...cart, {...item, quantity: 1}]);
+        cart.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+        )
+      );
+    } else {
+      setCart([...cart, { ...item, quantity: 1 }]);
     }
   };
 
@@ -46,12 +55,21 @@ export const CartProvider = ({children})=>{
 
   const clearCart = () => {
     setCart([]);
+    localStorage.removeItem("cart"); //remove from storage on clear
   };
 
-
   return (
-    <CartContext.Provider value={{cart, addToCart, increaseQty, decreaseQty, removeItem, clearCart}}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        increaseQty,
+        decreaseQty,
+        removeItem,
+        clearCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
-  )
-}
+  );
+};

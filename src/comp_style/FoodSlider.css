@@ -1,6 +1,5 @@
 .menu-con{
   width: 100%;
-  border: 1px solid red;
 }
 .header{
   display: flex;
@@ -33,35 +32,41 @@
 }
 .menu-scroll-list{
   width: 100%;
-  border: 1px solid black;
+
 }
 .food-grid{
   width: auto;
-  border: 2px solid red;
   display: flex;
   gap: 10px;
   align-items: center;
   overflow: auto;
   scroll-snap-type: x mandatory;
+  margin: 0px 0px 15px 0px;
+}
+.foodLink{
+  text-decoration: none;
+  border-radius: 8px;
+}
+.foodLink:hover{
+  cursor: pointer;
+
 }
 .gridFood{
   min-width: 150px;
   min-height: 100px;
   background-color: var( --Background);
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
   padding: 10px;
 }
 .foodimageWrap{
   width: 100%;
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .foodimage{
   width: 100%;
-  border: 1px solid black;
   height: 100px;
   border: 80px;
 }

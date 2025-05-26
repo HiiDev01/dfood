@@ -17,9 +17,9 @@ const Home = () => {
         <div className="head">
           <h3>home</h3>
           <div className="head-link">
-            <Link to='/Food'>dfoody</Link>
+            <Link to='/Dashboard'>Home</Link>
             <FaAngleRight  className='head-icon'/>
-            <Link to='/'>home</Link>
+            <Link to='/Food'>Food</Link>
           </div>
         </div>
 
@@ -31,7 +31,7 @@ const Home = () => {
                 dishes with a seamless food delivery 
                 experience!
               </p>
-              <Link >order now</Link>
+              <Link to={`/Food`}>order now</Link>
             </div>
             <div className="item-contnt">
               <img src={rider} alt="illus" />
@@ -47,7 +47,7 @@ const Home = () => {
                 Use code EAT20 at checkout and enjoy 
                 delicious savings.
               </p>
-              <Link to='/Order'>use promo code</Link>
+              <Link to='/Cart'>use promo code</Link>
             </div>
           </div>
         </div>
@@ -56,7 +56,6 @@ const Home = () => {
           <FoodSlider/>
         </div>
         <FeaturedRestaurant/>
-
       </div>
     </div>
   )

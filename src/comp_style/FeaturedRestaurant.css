@@ -1,9 +1,8 @@
 .featured{
   width: 100%;
-  border: 1px solid black;
 }
 .featured .head{
-  width: max-content;
+  width: 100%;
 }
 .featured .head h2{
   font-size: 1.5rem;
@@ -12,7 +11,14 @@
   font-family: var(--font-one);
   text-transform: capitalize;
 }
+.featured .head P{
+  font-family: var(--font-one);
+  font-size: 1.1rem;
+  color: var(--Text);
+  text-transform: capitalize;
+  font-weight: 400;
 
+}
 
 .sh-grid{
   width: 100%;
@@ -110,3 +116,19 @@
   font-family: var(--font-two);
   text-transform: capitalize;
 }
+
+
+
+@media (max-width: 768px) {
+  .sh-grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns on tablet */
+  }
+}
+@media (max-width: 480px) {
+  .sh-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns on mobile */
+  }
+}
+
+
+

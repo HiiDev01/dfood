@@ -29,9 +29,9 @@ const Cart = () => {
         <div className="head">
           <h3>Cart</h3>
           <div className="head-link">
-            <Link to='/Food'>cart</Link>
+            <Link to='/Cart'>cart</Link>
             <FaAngleRight  className='head-icon'/>
-            <Link to='/'>food</Link>
+            <Link to='/Food'>food</Link>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ const Cart = () => {
             ) : (
               <ul>
                 {cart.map((item) =>(
-                  <li>
+                  <li key={item.id}>
                     <div className='li_childOne'>
                       <div className="cartImg"><img src={item.image} alt={item.name}  /></div>
                       <div>
