@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
+import { Links } from 'react-router-dom';
 import "../page_style/SignUpPage.css"
 
 
@@ -114,7 +115,9 @@ const SignUpPage = () => {
                 </button>
               </div>  
             </form>
-            <p className='log'>already an account? <span><a href="">Login</a></span></p>
+            <p className='log'>already an account? 
+              <span><Link to={'/'}>Login</Link></span>
+            </p>
           </div>  
         </div>
       </div>

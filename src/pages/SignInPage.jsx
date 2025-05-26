@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "../page_style/SignInPage.css"
 
 const SignInPage = () => {
@@ -60,7 +61,7 @@ const SignInPage = () => {
                 <p>
                   <span><input type="checkbox" name="" id="" /> remember me</span>
                   </p>
-                <a href="">forget password</a>
+                <Link to={'/'}>forget password</Link>
               </div>
     
               <div className='loginbtnCon'>
@@ -73,7 +74,9 @@ const SignInPage = () => {
               </div>
             </form>
 
-            <p className='reg'>Don't have an account? <span><a href="">register here</a></span></p>
+            <p className='reg'>Don't have an account? 
+              <span><Link to={'/SignUpPage'}>register here</Link></span>
+            </p>
           </div>
 
         </div>
