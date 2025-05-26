@@ -116,7 +116,7 @@ const SignUpPage = () => {
               </div>  
             </form>
             <p className='log'>already an account? 
-              <span><Link to={'/'}>Login</Link></span>
+              <span><Link to={'/'}> Login</Link></span>
             </p>
           </div>  
         </div>

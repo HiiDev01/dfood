@@ -75,7 +75,7 @@ const SignInPage = () => {
             </form>
 
             <p className='reg'>Don't have an account? 
-              <span><Link to={'/SignUpPage'}>register here</Link></span>
+              <span><Link to={'/SignUpPage'}> Register here</Link></span>
             </p>
           </div>
 
