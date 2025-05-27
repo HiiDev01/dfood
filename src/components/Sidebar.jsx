@@ -33,7 +33,7 @@ const Sidebar = () => {
     <div className={`sidebar ${isSidebarOpen ? (isCollapse ? 'collapsed' : 'expanded') : "hidden"}`}>
       <div className='app-logo'>
         <img src={logo} className='app-logo-img'/>
-        <span className='app-logo-text'><h1>Dfoody</h1></span>
+        <span className='app-logo-text'><h1>foody</h1></span>
       </div>
       <div className='side-list-wrap'>
         <h2 className='sidelist-head'>main menu</h2>

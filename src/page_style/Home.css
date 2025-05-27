@@ -10,6 +10,9 @@
   padding: 20px 20px 5% 20px;
   overflow-y: scroll;
 }
+.home-content::-webkit-scrollbar{
+  display: none;     
+}
 .head{
   width: 100%;
   display: flex;

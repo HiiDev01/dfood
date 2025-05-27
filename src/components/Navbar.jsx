@@ -19,10 +19,10 @@ const Navbar = () => {
             className='hamburger'>
             <GiHamburgerMenu className='hmgIcon' />
           </button>
-          <div className="navsearch">
+          {/*<div className="navsearch">
             <CiSearch className='navsearchIcon' />
             <input type="search" name="search" id="search" />
-          </div>
+          </div>*/}
         </div>
 
         {/*  component here */}
