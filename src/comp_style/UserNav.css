@@ -119,11 +119,13 @@
 }
 .userSec{
   position: absolute;
-  top: 150%;
+  top: 135%;
   right: 0;
   background-color: var(--Background);
   box-shadow: 0px 0px 1px var(  --Button);
   border-radius: 2px;
+  z-index: 99;
+  width: max-content;
 }
 .userSec ul{
   list-style: none;

@@ -25,7 +25,7 @@
     width: 100%;
   }
   .change_appr{
-    display: block;
+    display: none;
   }
 }
 @media screen and (max-width: 780px){

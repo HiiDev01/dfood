@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import { useCart } from "./CartContext";
+import { useNavigate } from 'react-router-dom';
 import { FaRegEdit } from "react-icons/fa";
 import { LuUser } from "react-icons/lu";
 import { FiLogOut } from "react-icons/fi";
@@ -10,11 +11,19 @@ import '../comp_style/UserNav.css';
 import { Link } from 'react-router-dom'
 
 const UserNav = () => {
+  const navigate = useNavigate();
  
   const [profile, setProfile] = useState(false);
   const {cart} = useCart(); //to show number of item in navbar notification
 
   const totalItemInCart = cart.reduce((sum, item) => sum + item.quantity, 0);/// add the total number of items in the cart 
+
+  const handleLogout = ()=>{
+    localStorage.removeItem('user');
+    sessionStorage.removeItem('user')
+
+    navigate('/')
+  }
 
   return (
     <div className="usernav">
@@ -41,14 +50,14 @@ const UserNav = () => {
           <div className="abs_overlay"></div>
           <ul>
             <li>
-              <a href="/"><LuUser className="profIcon" /> My Profile</a>
+              <a href="/Dashboard"><LuUser className="profIcon" /> My Profile</a>
             </li>
             <li>
-              <a href="/"><FaRegEdit className="profIcon" /> Edit Profile</a>
+              <a href="/Dashboard"><FaRegEdit className="profIcon" /> Edit Profile</a>
             </li>
           </ul>
           <div className="logoutDiv">
-            <button><FiLogOut className="profIcon" /> Log out</button>
+            <button onClick={handleLogout}><FiLogOut className="profIcon" /> Log out</button>
           </div>
         </div>
       )}

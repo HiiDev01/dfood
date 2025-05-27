@@ -75,7 +75,7 @@ const SingleFoodPage = () => {
   return (
     <div className='singleFoodPage'>
       <Navbar/>
-      <Link to={`/`} className="backfood">/home</Link>
+      <Link to={`/Dashboard`} className="backfood">Home</Link>
       <Link to={`/Food`} className="backfood">/Food</Link>
       <div key={food.id} className="container">
         <div className="min-continer">

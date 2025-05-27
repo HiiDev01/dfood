@@ -23,7 +23,7 @@ const AppLayout = () => {
     <div className='app'>
       {!hideSidebar && <Sidebar />}
 
-      {isSidebarOpen && window.innerWidth <= 768 && !hideSidebar && (
+      {isSidebarOpen && window.innerWidth <= 1200 && !hideSidebar && (
         <div className="sidebar-overlay" onClick={closeSidebar}></div>
       )}
 

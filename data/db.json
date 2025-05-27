@@ -172,7 +172,7 @@
       "productId": 2,
       "name": "Pizza",
       "price": 9.99,
-      "quantity": 12,
+      "quantity": 13,
       "total": 19.98,
       "status": "pending",
       "date": "2025-05-23"
@@ -183,7 +183,7 @@
       "productId": 1,
       "name": "Cheeseburger",
       "price": 5.99,
-      "quantity": 14
+      "quantity": 15
     },
     {
       "id": "f68b",

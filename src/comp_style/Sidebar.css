@@ -127,6 +127,41 @@
 
 
 /* Small screen responsiveness */
+@media screen and (max-width: 1200px){
+    .sidebar {
+    position: fixed;
+    width: 30%;
+    max-width: 300px;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+
+  .sidebar.expanded,
+  .sidebar.collapsed {
+    transform: translateX(0);
+    width: 50%;
+  }
+
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+
+
+  .sidebar.expanded li .side-text {
+    display: block;
+  }
+  .sidebar.expanded .app-logo span{
+    display: block;
+  }
+  .sidebar.expanded .app-logo {
+    justify-content: center;
+  }
+  .sidebar.expanded .sidelist-head {
+    display: block;
+  }
+}
 @media screen and (max-width: 768px) {
   .sidebar {
     position: fixed;
@@ -136,6 +171,8 @@
     transform: translateX(-100%);
     z-index: 1000;
   }
+
+
 
   .sidebar.expanded,
   .sidebar.collapsed {

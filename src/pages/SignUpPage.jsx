@@ -42,14 +42,14 @@ const SignUpPage = () => {
     if(formData.password.length < 6){
       setError('password must be atleast 6 characters')
     }
-    return
-
+    return;
 
     setTimeout(()=>{
-      alert('signup succesful redirecting to login....');
-      navigate('/SignInPage');
+     alert('signup succesful redirecting to login....');
+      navigate('/');
     }, 1000);
   }
+
   return (
     <div className='signUpPage'>
       <div className='signUpWraper'>

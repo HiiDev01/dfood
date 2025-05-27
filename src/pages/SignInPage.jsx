@@ -19,7 +19,8 @@ const SignInPage = () => {
     e.preventDefault();
 
     if(email === 'admin@email.com' && password === '123456'){
-      navigate('/Dashboard')
+      alert('login successful');
+      navigate('/Dashboard');
     }else{
       setError('Incorrect email or password')
       console.log('error login')
