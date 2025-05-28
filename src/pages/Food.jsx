@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar'
 import '../page_style/Food.css'
 import { Link } from 'react-router-dom'
 import { FaAngleRight } from "react-icons/fa";
-import Slider from 'react-slider'; 
 import { IoStar, IoStarOutline, IoStarHalf} from "react-icons/io5";
 import SearchBox from '../components/SearchBox';
 import RatingStar from '../components/RatingStar';
