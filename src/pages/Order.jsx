@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { FaAngleRight } from "react-icons/fa";
-import "../page_style/Order.CSS"
+import "../page_style/Order.css"
 import Navbar from '../components/Navbar';
 
 const Order = () => {
