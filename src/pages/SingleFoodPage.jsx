@@ -18,7 +18,7 @@ const SingleFoodPage = () => {
 
   useEffect(() => {
     const fetchFood =  async () => {
-      const res = await fetch(`http://localhost:5000/products/${id}`)
+      const res = await fetch(`https://json-db-api.onrender.com/products/${id}`)
       const data = await res.json()
       setFood(data)
     }
