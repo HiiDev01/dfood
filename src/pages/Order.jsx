@@ -14,7 +14,7 @@ const Order = () => {
     const fetchOrder = async () => {
       if(isLoggedIn){
         try {
-          const res = await fetch(`http://localhost:5000/orders?userId=${user.id}`)
+          const res = await fetch(`https://json-db-api.onrender.com/orders?userId=${user.id}`)
           if (!res.ok) throw new Error("Failed to fetch orders");
           const text = await res.text();
           const data = text ? JSON.parse(text) : [];

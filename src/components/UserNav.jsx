@@ -47,7 +47,7 @@ const UserNav = () => {
       </button>
       {profile && (
         <div className="userSec">
-          <div className="abs_overlay"></div>
+          
           <ul>
             <li>
               <a href="/Dashboard"><LuUser className="profIcon" /> My Profile</a>
@@ -61,6 +61,7 @@ const UserNav = () => {
           </div>
         </div>
       )}
+      <div className="abs_overlay"></div>
     </div>
   );
 };

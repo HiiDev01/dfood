@@ -28,7 +28,7 @@ const Food = () => {
 
 
 
-  const uri = `http://localhost:5000/products`
+  const uri = `https://json-db-api.onrender.com/products`
   useEffect(()=>{
     const fetchFood = async ()=>{
       const res = await fetch(uri)
@@ -57,19 +57,19 @@ const Food = () => {
 
   const handleAddToCart = async (foods)=>{
     if(isLoggedIn){
-      const res = await fetch(`http://localhost:5000/orders?userId=${userId}&productId=${foods.id}`)
+      const res = await fetch(`https://json-db-api.onrender.com/orders?userId=${userId}&productId=${foods.id}`)
       const existItem = await res.json()
 
       if(existItem.length > 0){
         const updateItem = {...existItem[0], quantity: existItem[0].quantity + 1};
-        await fetch(`http://localhost:5000/orders/${existItem[0].id}`,
+        await fetch(`https://json-db-api.onrender.com/orders/${existItem[0].id}`,
           {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(updateItem),
           });
       }else{
-        await fetch("http://localhost:5000/orders", {
+        await fetch("https://json-db-api.onrender.com/orders", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
 

@@ -8,7 +8,7 @@ const FoodSlider = () => {
   const [fetchError, setFetchError] = useState(null);
   const [food, setFood] = useState(null)
 
-  const uri = "http://localhost:5000/products"
+  const uri = "https://json-db-api.onrender.com/products"
   useEffect( ()=>{
     const fetchFood = async () =>{
       const res = await fetch(uri)
@@ -33,7 +33,7 @@ const FoodSlider = () => {
         <Link to="#">veiw all</Link>
       </div>
       <div className="menu-scroll-list">
-           {setFetchError &&(<p>{fetchError}</p>)} 
+           {fetchError  &&(<p>{fetchError}</p>)} 
             {food &&(
              <div className='food-grid'>
               {food.map(foods =>(
