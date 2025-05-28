@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react'
 import Navbar from '../components/Navbar'
 import '../page_style/Food.css'
 import { Link } from 'react-router-dom'
+import Slider from 'react-slider';
 import { FaAngleRight } from "react-icons/fa";
 import { IoStar, IoStarOutline, IoStarHalf} from "react-icons/io5";
 import SearchBox from '../components/SearchBox';
